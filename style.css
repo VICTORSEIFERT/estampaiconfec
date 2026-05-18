@@ -1,6 +1,10 @@
 /* =================================
    RESET GLOBAL
 ================================= */
+:root {
+  --primary-color: #6366f1;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
 
 *{
     margin:0;
@@ -12,337 +16,6 @@ img{
     max-width:100%;
     display:block;
 }
-
-/* =================================
-   IMG
-================================= */
-
-eu queria colocar o meu mascote na lateral direira, mas não estou conseguindo
-ficou assim
-agora esta horrivel o alinhamento com o logo estampai, queria que ele ficasse no centro da pagina e  não tão a cima (tão afastado)
-Imagem criada
-•
-Personalize o seu estilo com estampai
-
-Personalize o seu estilo com estampai
-
-Editar
-
-Sim 😄
-Seu HTML está quase certo, mas tem alguns erros de estrutura e detalhes que podem quebrar layout, CSS e navegação.
-
-Os principais problemas são:
-
-1. DIV .logo vazia e mal posicionada
-
-Você abriu:
-
-<div class="logo">
-                
-</div>
-
-mas ela não contém nada e está no lugar errado.
-
-Além disso, seu logo já está aqui:
-
-<img src="img/logo-svg-estampai.svg" alt="Logo Estampaí">
-
-Então essa div.logo é desnecessária.
-
-2. Estrutura do HEADER confusa
-
-Seu logo está FORA do .container, então ele fica desalinhado.
-
-O ideal:
-
-<header>
-    <div class="container">
-
-e tudo dentro dele.
-
-3. Nome de arquivos .htm
-
-Você misturou:
-
-processo.htm
-portifolio.htm
-
-com .html.
-
-Pode funcionar, MAS:
-
-o normal hoje é usar .html
-provavelmente esses arquivos nem existem ainda
-
-Então melhor:
-
-processo.html
-portfolio.html
-4. “portifolio” está escrito errado
-
-O correto:
-
-portfolio.html
-
-não:
-
-portifolio.htm
-5. Espaço no nome da imagem
-
-Você colocou:
-
-<img src="img/mascote apresentação.png">
-
-Espaço em nome de arquivo pode gerar problema.
-
-Melhor:
-
-mascote-apresentacao.png
-6. ALT com erro de digitação
-
-Você escreveu:
-
-alt="LOgo Estampaí"
-
-Melhor:
-
-alt="Logo Estampaí"
-7. Hero image
-
-Essa parte está correta 👍
-
-VERSÃO CORRIGIDA
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" href="img/favicon-svg-estampai.svg">
-
-    <title>Estampaí Confecções | Uniformes Personalizados</title>
-
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-
-        <div class="container">
-
-            <div class="header-content">
-
-                <!-- TEXTO -->
-                <div class="header-texto">
-
-                    <!-- LOGO -->
-                    <img 
-                        src="img/logo-svg-estampai.svg" 
-                        alt="Logo Estampaí"
-                        class="logo">
-
-                    <h1>Estampaí Confecções</h1>
-
-                    <p>Personalize o seu estilo</p>
-
-                    <!-- MENU -->
-                    <nav>
-
-                        <ul class="menu">
-
-                            <li><a href="index.html">Home</a></li>
-
-                            <li><a href="sobre.html">Sobre</a></li>
-
-                            <li><a href="produtos.html">Produtos</a></li>
-
-                            <li><a href="processo.html">Processo</a></li>
-
-                            <li><a href="portfolio.html">Portfólio</a></li>
-
-                            <li><a href="contato.html">Contato</a></li>
-
-                            <li><a href="trabalhe_com_a_gente.html">Trabalhe conosco</a></li>
-
-                        </ul>
-
-                    </nav>
-
-                </div>
-
-                <!-- MASCOTE -->
-                <div class="header-mascote">
-
-                    <img 
-                        src="img/mascote-apresentacao.png" 
-                        alt="Mascote Estampaí">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-
-        <img 
-            src="img/confeccao-1900px.jpg"
-            alt="Roupas em arara na confecção Estampaí">
-
-    </section>
-
-    <!-- BOTÃO -->
-    <button class="btn">Clique aqui</button>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="section-clara">
-
-        <div class="container">
-
-            <!-- DIFERENCIAIS -->
-            <section class="box" id="diferenciais">
-
-                <h2>Por que escolher a Estampaí?</h2>
-
-                <ul>
-
-                    <li>✔ Produção própria</li>
-
-                    <li>✔ Personalização completa</li>
-
-                    <li>✔ Entrega para todo o Brasil</li>
-
-                    <li>✔ Atendimento especializado</li>
-
-                </ul>
-
-            </section>
-
-            <!-- CTA -->
-            <section class="box" id="cta">
-
-                <h2>Pronto para personalizar suas peças?</h2>
-
-                <a href="contato.html" class="btn">
-
-                    Solicitar orçamento
-
-                </a>
-
-            </section>
-
-        </div>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="container">
-
-            <p>&copy; 2026 Estampaí Confecções. Todos os direitos reservados.</p>
-
-            <nav class="footer-links">
-
-                <a href="#">Política de Privacidade</a>
-
-                <span>|</span>
-
-                <a href="#">Termos de Uso</a>
-
-            </nav>
-
-        </div>
-
-    </footer>
-
-</body>
-
-</html>
-coloquei i logo no conteiner e ficou assim
-
-Parece que a imagem não veio junto na mensagem 😅
-Consegue enviar o print de como ficou agora? Assim eu consigo te falar exatamente o que ajustar no alinhamento do logo, texto e mascote.
-
-Agora ficou bem melhor 😄
-Mas dá pra ver exatamente o que está acontecendo:
-
-o mascote saiu do layout e ficou “solto”
-o logo está empurrando o título
-o menu foi parar no topo direito
-os elementos não estão organizados em colunas
-
-O problema é que o HTML/CSS perdeu a estrutura do flex.
-
-Você precisa separar:
-
-coluna esquerda → logo + texto + menu
-coluna direita → mascote
-Estrutura correta do HTML
-
-Troque seu HEADER inteiro por este:
-
-<header>
-
-    <div class="container">
-
-        <div class="header-content">
-
-            <!-- LADO ESQUERDO -->
-            <div class="header-texto">
-
-                <img 
-                    src="img/logo-svg-estampai.svg"
-                    alt="Logo Estampaí"
-                    class="logo">
-
-                <h1>Estampaí Confecções</h1>
-
-                <p>Personalize o seu estilo</p>
-
-                <nav>
-
-                    <ul class="menu">
-
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="processo.html">Processo</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
-            <!-- LADO DIREITO -->
-            <div class="header-mascote">
-
-                <img 
-                    src="img/mascote-apresentacao.png"
-                    alt="Mascote Estampaí">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
-CSS correto para alinhar tudo
-
-Adicione/substitua:
 
 /* =================================
    HEADER
@@ -375,7 +48,35 @@ header{
 
     gap:60px;
 }
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
 
+.botao-estiloso {
+  background: var(--bg-gradient);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.botao-estiloso:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 
 /* COLUNA ESQUERDA */
 
@@ -455,14 +156,6 @@ header{
 /* =================================
    FONTS
 ================================= */
-
-@font-face {
-    font-family:"Montserrat";
-    src:url("../Estampai/fonts/Montserrat-ExtraBold.ttf") format("truetype");
-    font-weight:800;
-    font-style:normal;
-    font-display:swap;
-}
 
 @font-face {
     font-family:"Poppins";
